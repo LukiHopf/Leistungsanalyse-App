@@ -11,7 +11,7 @@ if __name__ == "__main__":
     #Build a Subject
     #subject1 = build_person("Max", "Mustermann", "male", 25)
     print("Bitte geben Sie die Daten des Subjects ein:")
-    subject1 = build_person(input("Vorname:" ), input("Nachname:" ),  input("Geschlecht (englisch):"), int(input("Alter:")))
+    subject1 = build_person(input("Vorname:" ), input("Nachname:" ),  input("Geschlecht (male or female:"), int(input("Alter:")))
 
     # Build an experiment
     #experiment1 = build_experiment("First Experiment", "2024-04-05", supervisor1, subject1)
