@@ -12,6 +12,8 @@
 ## Nötigen Pakete installieren:
 ### Die nötigen Pakete sind in der Text-Datei requirements.txt angeführt.
 ### Für die nächten Schritt müssen sie sich schon in der Umgebung befinden und diese muss aktiviert sein.
-### Sie können sie einzeln installieren indem sie folgenden Befehl in die Komandozeile von Windows Powershell eingeben: pip insall <gewünschtes Paket>
+### Sie können sie einzeln installieren indem sie folgenden Befehl in die Komandozeile von Windows Powershell eingeben: pip install <gewünschtes Paket>
 ### Sie können auch alle Pakete gleichszeitig installieren indem sie folgenden Befehl in die Komandozeile von Windows Powershell eingeben: pip install -r requirements.txt
 ## Der Code kann nun Ausgeführt werden.
+### Code ausführen und die geforderten Daten eingeben !!bei Geschlecht nur: male oder female schreiben!! (Falls nicht muss der Benutzer die max. Heartrate manuell eingeben
+### Experiment wird in json-Datei gespeichert und abgelegt
