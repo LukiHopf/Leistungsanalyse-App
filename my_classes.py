@@ -1,4 +1,5 @@
 import json
+from my_functions import estimate_max_hr
 # die Klassen Person und Experiment erstellen
 
 class Person(): # Klasse Person wird erstellt
@@ -8,21 +9,10 @@ class Person(): # Klasse Person wird erstellt
             self.last_name = last_name,
             self.sex = sex,
             self.age = age,
-            self.max_hr = self.estimate_max_hr()
-
-    # aus my_functions.py kopiert und bei sex und age .self hinzugefügt da es nun in einer Klasse arbeitet
-    def estimate_max_hr(self) -> int:
-        if self.sex == "male":
-            max_hr_bpm =  223 - 0.9 * self.age
-        elif self.sex == "female":
-            max_hr_bpm = 226 - 1.0 *  self.age
-        else:
-            # der input() öffnet ein Eingabefenster für den Nutzer und speichert die Eingabe
-            max_hr_bpm  = input("Enter maximum heart rate:")
-        return int(max_hr_bpm)
-
+            self.max_hr = estimate_max_hr(age, sex)
+    
     def save(self):
-        with open("Person_{}{}_.json".format(self.last_name, self.first_name),  "a") as outfile: # Vorname und Nachname werden als Dateiname verwendet
+        with open("Person_{}_{}.json".format(self.last_name, self.first_name),  "w") as outfile: # Vorname und Nachname werden als Dateiname verwendet
             json.dump(self.__dict__, outfile) # speichert die Daten als DICT in einer JSON Datei
 
 class Experiment(): # Klasse Experiment wird erstellt
@@ -34,6 +24,6 @@ class Experiment(): # Klasse Experiment wird erstellt
         self.subject = subject
     
     def save(self):
-        with open("Experiment_{}.json".format(self.experiment_name), "a") as outfile: # Experimentname wird als Dateiname verwendet
+        with open("Experiment_{}.json".format(self.experiment_name), "w") as outfile: # Experimentname wird als Dateiname verwendet
             json.dump(self.__dict__, outfile) # speichert die Daten als DICT in einer JSON Datei
 
