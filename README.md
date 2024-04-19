@@ -17,3 +17,6 @@
 - #### Der Code kann nun Ausgeführt werden.
 - Code ausführen und die geforderten Daten eingeben !!bei Geschlecht nur: male oder female schreiben!! (Falls nicht muss der Benutzer die max. Heartrate manuell eingeben)
 - Experiment wird in json-Datei gespeichert und abgelegt
+### Den Branch in VS-Code wechseln
+- ein neues PowershellTerminal erstellen 
+- Mit dem Befehl `git checkout <Name of Branch>` den Branch wechseln
