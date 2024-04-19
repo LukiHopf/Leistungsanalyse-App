@@ -17,3 +17,14 @@
 - #### Der Code kann nun Ausgeführt werden.
 - Code ausführen und die geforderten Daten eingeben !!bei Geschlecht nur: male oder female schreiben!! (Falls nicht muss der Benutzer die max. Heartrate manuell eingeben)
 - Experiment wird in json-Datei gespeichert und abgelegt
+## Verwenden des Codes
+- Geben Sie die nötigen Daten des Supervisor ein. (Vorname / Nachname / Geschlecht / Alter)
+- Geben Sie die nötigen Daten des Subjects ein. (Vorname / Nachname / Geschlecht / Alter)
+- Geben Sie den gewünschten Namen des Experiments ein.
+- Geben Sie das gewünschte Datum ein.
+- Nun können Sie auswählen welche Daten Sie als json-Datei speichern wollen. (Supervisor / Subject / Experiment / Exit)
+- Durch die Eingabe von Exit wird der Vorgang abgebrochen und keine Datein werden gespeichert.
+- Nun wird abgefragt ob weitere Daten eingegeben werden wollen. (Ja / Nein).
+- Mit Nein wird das Programm abgebrochen mit Ja können Sie erneut Daten eingeben.
+- Generell wird bei einer ungültigen Eingabe eine Fehlermeldung hervorgerufen und die Eingabe wiederholt.
+
