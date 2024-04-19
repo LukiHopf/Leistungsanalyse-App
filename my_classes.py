@@ -23,7 +23,7 @@ class Person():
     
     #Funktion welche die Daten als Dict in einer json-Datei speichert!
     def save(self):
-        with open("Person_{}_{}".format(self.first_name, self.last_name), "a") as outfile: 
+        with open("Person_{}_{}.json".format(self.first_name, self.last_name), "a") as outfile: 
             json.dump(self.__dict__, outfile)
         
 
@@ -40,6 +40,6 @@ class Experiment():
 
     #Funktion welche die Daten als Dict in einer json-Datei speichert!
     def save(self):
-        with open("Experiment_{}".format(self.experiment_name), "a") as outfile:
+        with open("Experiment_{}.json".format(self.experiment_name), "a") as outfile:
             json.dump(self.__dict__, outfile)
 
