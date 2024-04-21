@@ -37,15 +37,15 @@ if __name__ == "__main__":
     if input("Soll das Experiment gespeichert werden? (ja/Nein):") == "ja":
         experiment1.save()
         print("Experiment wurde gespeichert.")
-    elif input("Soll der Supervisor gespeichert werden? (ja/Nein):") == "ja":
+    if input("Soll der Supervisor gespeichert werden? (ja/Nein):") == "ja":
         supervisor1.save()
         print("Supervisor wurde gespeichert.")
-    elif input("Soll das Subject gespeichert werden? (ja/Nein):") == "ja":
+    if input("Soll das Subject gespeichert werden? (ja/Nein):") == "ja":
         subject1.save()
         print("Subject wurde gespeichert.")
     else:
         print("Keine Daten wurden gespeichert.")
-        
+
 
 
 
