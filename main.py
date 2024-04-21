@@ -26,13 +26,30 @@ if __name__ == "__main__":
     print("Bitte geben Sie die Daten des Experiments ein:")
     experiment1 = Experiment(
         input("Experimentname:" ), 
-        input("Datum:" ), 
+        input("Datum (Tag, Monat, Jahr):" ), 
         supervisor1, 
         subject1)
 
     #Print Experiment
     print(experiment1)
 
+
+    if input("Soll das Experiment gespeichert werden? (ja/Nein):") == "ja":
+        experiment1.save()
+        print("Experiment wurde gespeichert.")
+    elif input("Soll der Supervisor gespeichert werden? (ja/Nein):") == "ja":
+        supervisor1.save()
+        print("Supervisor wurde gespeichert.")
+    elif input("Soll das Subject gespeichert werden? (ja/Nein):") == "ja":
+        subject1.save()
+        print("Subject wurde gespeichert.")
+    else:
+        print("Keine Daten wurden gespeichert.")
+        
+
+
+
+
 #Speichern der Datei
-with open("Aufgabe61.json", "a") as outfile: 
-    json.dump(experiment1.__dict__, outfile)
+# with open("Aufgabe61.json", "a") as outfile: 
+  #  json.dump(experiment1.__dict__, outfile)
