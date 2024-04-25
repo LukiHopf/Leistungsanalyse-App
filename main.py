@@ -27,8 +27,8 @@ if __name__ == "__main__":
     experiment1 = Experiment(
         input("Experimentname:" ), 
         input("Datum (Tag, Monat, Jahr):" ), 
-        supervisor1, 
-        subject1)
+        supervisor1.__dict__, 
+        subject1.__dict__)
 
     #Print Experiment
     print(experiment1)
