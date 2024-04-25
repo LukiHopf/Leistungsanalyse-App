@@ -1,7 +1,7 @@
 import json
 
 if __name__ == "__main__":
-    from my_classes import Person, Experiment
+    from my_classes import Person, Experiment, Supervisor, Subject
 
     repetition = True
 
@@ -9,14 +9,15 @@ if __name__ == "__main__":
 
         #Erstellen des Supervisors mit der Klasse Person
         print("Geben Sie die benötigten Daten des Supervisors ein: ")
-        supervisor1 = Person(input("Vorname: "), input("Nachname: "), input("Geschlecht (male / female): "), int(input("Alter: ")))
+        supervisor1 = Supervisor(input("Vorname: "), input("Nachname: "), input("Geschlecht (male / female): "), input("Geburtsdatum (DD/MM/YYYY): "))
         
         #Erstellen des Subjects mit der Klasse Person
         print("Geben Sie die benötigten Daten des Subjects ein: ")
-        subject1 = Person(input("Vorname: "), input("Nachname: "), input("Geschlecht (male / female): "), int(input("Alter: ")))
+        subject1 = Subject(input("Vorname: "), input("Nachname: "), input("Geschlecht (male / female): "), input("Geburtsdatum (DD/MM/YYYY): "))
 
         #Erstellen des Experiments:
-        experiment_01 = Experiment(input("Name des Experiments: "), input("Datum: "), supervisor1.__dict__, subject1.__dict__)
+        print("Geben Sie den Namen des Experiments ein, Datum wird automatisch erstellt.")
+        experiment_01 = Experiment(input("Name des Experiments: "), supervisor1.__dict__, subject1.__dict__)
 
         #Abfrage was gespeichert werden soll
         print("Welche der eingegeben Daten wollen Sie in einer json-Datei speichern? (Supervisor / Subject / Experiment / Exit)")

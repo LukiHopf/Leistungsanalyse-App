@@ -1,14 +1,40 @@
 import json
+from datetime import date
 class Person():
     """Creates an object person"""
 
     #Konstruktor
-    def __init__(self, first_name, last_name, sex, age):
+    def __init__(self, first_name, last_name, sex, date_of_birth):
         self.first_name = first_name
         self.last_name = last_name
         self.sex = str(sex)
-        self.age = age
-        self.max_hr = self.estimate_max_hr()
+        self.__date_of_birth = str(date_of_birth)
+        self.age = self.calc_age()
+        
+    def calc_age(self):
+        """Calculates the age of an Subject with the date of birth"""
+        today = date.today()
+        date_list = self.__date_of_birth.split(".")
+        birth_date_day = int(date_list[0])
+        birth_date_month = int(date_list[1])
+        birth_date_year = int(date_list[2])
+        return today.year - birth_date_year - ((today.month, today.day) < (birth_date_month, birth_date_day))
+
+class Supervisor(Person):
+    """Creates an Object Supervisor"""        
+    def __init__(self, first_name, last_name, sex, date_of_birth):
+        super().__init__(first_name, last_name, sex, date_of_birth)
+
+    #Funktion welche die Daten als Dict in einer json-Datei speichert!
+    def save(self):
+        with open("Supervisor_{}_{}.json".format(self.first_name, self.last_name), "a") as outfile: 
+            json.dump(self.__dict__, outfile)
+
+
+class Subject(Person):
+    def __init__(self, first_name, last_name, sex, date_of_birth):
+        super().__init__(first_name, last_name, sex, date_of_birth)
+        self.max_heart_rate = self.estimate_max_hr()
 
     #Funktion zur berechnung der maximalen Heartrate
     def estimate_max_hr(self):
@@ -21,20 +47,20 @@ class Person():
             max_hr_bpm  = input("Enter maximum heart rate:")
         return int(max_hr_bpm)
     
+
     #Funktion welche die Daten als Dict in einer json-Datei speichert!
     def save(self):
-        with open("Person_{}_{}.json".format(self.first_name, self.last_name), "a") as outfile: 
+        with open("Subject_{}_{}.json".format(self.first_name, self.last_name), "a") as outfile: 
             json.dump(self.__dict__, outfile)
-        
-
+    
 
 class Experiment():
     """Creates an object experiment"""
 
     #Konstruktor
-    def __init__(self, experiment_name, date, supervisor, subject):
+    def __init__(self, experiment_name, supervisor, subject):
         self.experiment_name = experiment_name
-        self.date = str(date)
+        self.date = "{}.{}.{}".format(str(date.today().day), str(date.today().month), str(date.today().year))
         self.supervisor = supervisor
         self.subject = subject
 
@@ -43,3 +69,4 @@ class Experiment():
         with open("Experiment_{}.json".format(self.experiment_name), "a") as outfile:
             json.dump(self.__dict__, outfile)
 
+##Testen der Programme
