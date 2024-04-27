@@ -1,12 +1,12 @@
 import json
 
 if __name__ == "__main__":
-    from my_classes import Person, Experiment
+    from my_classes import Person, Subject, Supervisor, Experiment
 
     # Build a Supervisor
     #supervisor1 = build_person("Lukas", "Höpflinger", "male", 21)
     print("Bitte geben Sie die Daten des Supervisors ein:")
-    supervisor1 = Person(
+    supervisor1 = Supervisor(
         input("Vorname:" ), 
         input("Nachname:" ), 
         input("Geschlecht (male or female):"), 
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     #Build a Subject
     #subject1 = build_person("Max", "Mustermann", "male", 25)
     print("Bitte geben Sie die Daten des Subjects ein:")
-    subject1 = Person(
+    subject1 = Subject(
         input("Vorname:" ), 
         input("Nachname:" ), 
         input("Geschlecht (male or female):"), 
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     print("Bitte geben Sie die Daten des Experiments ein:")
     experiment1 = Experiment(
         input("Experimentname:" ), 
-        input("Datum (Tag, Monat, Jahr):" ), 
+        input("Datum (Tag.Monat.Jahr):" ), 
         supervisor1.__dict__, 
         subject1.__dict__)
 
@@ -44,7 +44,7 @@ if __name__ == "__main__":
         subject1.save()
         print("Subject wurde gespeichert.")
     else:
-        print("Keine Daten wurden gespeichert.")
+        print("Die gewünschten Daten wurden gespeichert.")
 
 
 
