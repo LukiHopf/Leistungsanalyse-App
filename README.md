@@ -10,7 +10,7 @@
 - Falls dieser nicht funktioniert gib vorher folgenden Befehl ein um den Zugriff zu erlauben: `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`.
 - Der Virtuelle Bereich ist nun erstellt und activiert.
 ## Nötigen Pakete installieren:
-- Die nötigen Pakete sind in der Text-Datei requirements.txt angeführt.
+- Die nötigen Pakete sind in der Text-Datei `requirements.txt` angeführt.
 - Für die nächten Schritt müssen sie sich schon in der Umgebung befinden und diese muss aktiviert sein.
 - Sie können sie einzeln installieren indem sie folgenden Befehl in die Komandozeile von Windows Powershell eingeben: `pip install <gewünschtes Paket>`
 - Sie können auch alle Pakete gleichszeitig installieren indem sie folgenden Befehl in die Komandozeile von Windows Powershell eingeben: `pip install -r requirements.txt`
