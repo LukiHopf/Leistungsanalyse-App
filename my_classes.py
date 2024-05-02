@@ -39,7 +39,7 @@ class Person():
         print(response.text)
     
     def get(self):
-        url = "http://127.0.0.1:5000/person/" + self.first_name
+        url = "http://127.0.0.1:5000/person/"+ self.first_name
         response = requests.get(url)
         print(response.text)
 
@@ -82,8 +82,9 @@ class Subject(Person):
         #URL für den Webserver inkluse Verweis auf die jeweilige Person
         url = "http://127.0.0.1:5000/person/"+ self.first_name
         #Erstellen der Daten:
-        data = {"email" : self.email,
-                "age" : self.age}
+        data = {
+                "email" : self.email
+                }
         #Daten in eine json-Datei konvertieren:
         data_json = json.dumps(data)
         #Senden der Daten an den Webserver --> Put request / Ausgabe der Antwort des Webservers
