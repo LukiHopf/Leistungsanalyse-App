@@ -59,7 +59,7 @@ class Subject(Person):
     def __init__(self, first_name, last_name, sex, date_of_birth):
         super().__init__(first_name, last_name, sex, date_of_birth)
         self.max_heart_rate = self.estimate_max_hr()
-        self.email = "{}.{}@oida.at".format(self.first_name, self.last_name)
+        self.email = "{}.{}@mail.at".format(self.first_name, self.last_name)
 
     #Funktion zur berechnung der maximalen Heartrate
     def estimate_max_hr(self):
