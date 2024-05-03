@@ -14,8 +14,12 @@
 - Der Virtuelle Bereich ist nun erstellt und activiert.
 
 ## Nötigen Pakete installieren:
+<<<<<<< HEAD
 
 - Die nötigen Pakete sind in der Text-Datei requirements.txt angeführt.
+=======
+- Die nötigen Pakete sind in der Text-Datei `requirements.txt` angeführt.
+>>>>>>> b8221e2ca5d2f08fa710ef6a8255d40f8acdfe76
 - Für die nächten Schritt müssen sie sich schon in der Umgebung befinden und diese muss aktiviert sein.
 - Sie können sie einzeln installieren indem sie folgenden Befehl in die Komandozeile von Windows Powershell eingeben: `pip install <gewünschtes Paket>`
 - Sie können auch alle Pakete gleichszeitig installieren indem sie folgenden Befehl in die Komandozeile von Windows Powershell eingeben: `pip install -r requirements.txt`
