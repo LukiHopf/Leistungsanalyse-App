@@ -1,17 +1,15 @@
 import json
+from my_classes import Person, Subject, Supervisor, Experiment
 
 if __name__ == "__main__":
-    from my_classes import Person, Subject, Supervisor, Experiment
 
     # Build a Supervisor
     #supervisor1 = build_person("Lukas", "Höpflinger", "male", 21)
     print("Bitte geben Sie die Daten des Supervisors ein:")
     supervisor1 = Supervisor(
         input("Vorname:" ), 
-        input("Nachname:" ), 
-        input("Geschlecht (male or female):"), 
-        int(input("Alter:")))
-    
+        input("Nachname:" ))
+
     #Build a Subject
     #subject1 = build_person("Max", "Mustermann", "male", 25)
     print("Bitte geben Sie die Daten des Subjects ein:")
@@ -19,7 +17,8 @@ if __name__ == "__main__":
         input("Vorname:" ), 
         input("Nachname:" ), 
         input("Geschlecht (male or female):"), 
-        int(input("Alter:")))
+        input("Geburtsdatum (Tag.Monat.Jahr):"),
+        input("E-Mail:"))
 
     # Build an experiment
     #experiment1 = build_experiment("First Experiment", "2024-04-05", supervisor1, subject1)
